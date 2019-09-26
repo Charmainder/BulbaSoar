@@ -1,0 +1,70 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+ int main()
+{
+	char select;
+
+	cout << "\n  ____________________________________________ ";
+	cout << "\n |            Identity Access Menu            |";
+	cout << "\n |____________________________________________|";
+	cout << "\n Enter the letter for access to menu items:    ";
+	cout << "\n L): Login to Intranet ----------------------- ";
+	cout << "\n S): Set new Password ------------------------ ";
+	cout << "\n C): Change Current Password ----------------- ";
+	cout << "\n E): Exit ------------------------------------ ";
+
+	cout << "\n Please select a menu option: ";
+
+	cin >> select;
+
+	switch(select)
+		{
+		case 'L':
+		case 'l': 
+			{
+			cout << "\n _____________________________________________";
+			cout << "\n | Enter Password to log in to Intranet      |";
+			cout << "\n |___________________________________________|";
+			}
+		break;
+		case 'S':
+		case 's':
+			{
+			cout << "\n _____________________________________________";
+			cout << "\n | Please set a new password                 |";
+			cout << "\n |___________________________________________|";
+			
+			}
+		break;
+		case 'C':
+		case 'c': 
+			{
+			cout << "\n _____________________________________________";
+			cout << "\n | Enter passcode and then set new password  |";
+			cout << "\n |___________________________________________|";
+			}
+		break;
+		case 'E':
+		case 'e': 
+			{
+			cout << "\n _____________________________________________";
+			cout << "\n | Thank You For Using Our Software!         |";
+			cout << "\n |___________________________________________|";
+			}
+		break;
+		default: 
+			{
+			cout << "\n _____________________________________________";
+			cout << "\n | Enter passcode and then set new password  |";
+			cout << "\n |___________________________________________|";
+			}
+		break;
+		}
+
+	cout << "\n";
+
+	return 0;
+}
