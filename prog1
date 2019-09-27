@@ -1,0 +1,89 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+
+using namespace std;
+
+int digitCounter = '0';
+
+bool checkOne(string password)
+{
+	if (password.length()>=8)
+        {
+		return true;
+        }
+	else
+        {
+        cout << " Must have at least eight characters " << endl;
+		return false;
+        }
+}
+
+bool checkTwo(string password)
+{
+	for (int i = 0; i < password.length(); i++)
+	{
+	   if(isspace(password[i]))
+	        {
+	            return false;
+	        }
+	        
+	   if(ispunct(password[i])) 
+	        {
+	            cout << " Must consist of only letters and digits " << endl;
+	            return false;
+	        }
+	   else
+	        {
+	            return true;
+	        }
+	    
+	}
+}	    
+	  
+bool checkThree(string password)
+{
+	for (int i = 0; i < password.length(); i++)
+	{
+	    if (!(isdigit(password[i])) || !(isalpha(password[i])))
+				return true;
+		else
+		{
+		    cout << " Must contain at least two digits " << endl;
+			return false;
+		}
+	}
+}
+
+bool passwordCheck(string password)
+{
+	if (checkOne(password) && checkTwo(password) && checkThree(password))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+int main()
+{
+	string password;
+	cout << "Enter a password: " << endl;
+	
+	
+	getline(cin, password);
+
+	
+	if (passwordCheck(password))
+	{
+		cout << " Valid password" << endl;
+	}
+	else
+	{
+		cout << "Invalid password" << endl;
+	}
+
+	return 0;
+}
