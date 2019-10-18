@@ -1,0 +1,137 @@
+// Initalizing Variables //
+
+struct Car
+{
+	string carMake;
+	string carModel;
+	int yearModel;
+	double cost;
+};
+
+Make:Ford
+Model:Mustang
+Year Model:1968
+Cost :$20,000
+
+Car carInfo = { "Ford", "Mustang", 1968, 20000 };
+
+//////////////////////////////////////////////////////////////
+
+struct Car - // creating struct // 
+
+{
+	string carMake;
+	string carModel;
+	int year model;
+	double cost;
+};
+
+Car Info[25]; - // defining array for a struct //
+
+///////////////////////////////////////////////////////////////
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+struct MovieData
+{
+	string title;
+	string director;
+	int yearReleased;
+	int runningTime;
+};
+
+void showMovieData (MovieData movie);
+
+int main()
+{
+	MovieData movie1, movie2;
+	
+	movie1.title = "Ghost Story";
+	movie1.director = "John Irvin";
+	movie1.yearReleased = 1981;
+	movie1.runningTime = 110;
+	
+	movie2.title = "The Golden Boat";
+	movie2.director = "John Irvin";
+	movie2.yearReleased = 1981;
+	movie2.runningTime = 110;
+	
+	char Name_Director[20];
+	char Name_Producer[20];
+	int Release_year;
+	
+	showMovieData(movie1);
+	
+	showMovieData(movie2);
+	
+	return 0;
+}
+
+void showMovieData(MovieData movie)
+{
+	cout << right;
+	cout << setw(25) << movie.yearRelased << endl;
+	cout << setw(23) << "Title:" << movie.title << endl;
+	
+///////////////////////////////////////////////////////////////
+SavingAccount Person ={"ACZ42137-B12-7",4512.59,0.04,4217.07};
+
+// declare structre object //
+MovieData movie1;
+companydivision d1,d2,d3,d4;
+
+// get movie1 Data Member Title //
+cin.getline(movie1.Director,20);
+
+// assignment //
+
+center.x=12;
+
+// display //
+cout<<"X: "<<center.x<<"Y: "<<center.y<<endl;
+
+// dynamically alocate structure variable to to use x pointer //
+r = new Rectangle;
+
+// assign x to the structures member 1, and y to member 2 //
+r->member1=x;
+r->member2=y;
+
+// enums //
+enum Day {M, T, W};
+enum {MON, TUE, WED}; // anon data type
+enum {Jane=200, John=100}p1;
+enum Score {FIRST, SECOND=1000, THIRD} s1, s2;
+
+// x = x + 1; - cannot perform arithmetic operations on enums without casting //
+x = static_cast<Day>(x+1);
+cout<<x<<endl;
+
+int sales[3];
+sales[MON]=10;
+sales[TUE]=20;
+sales[WED]=30;
+
+for(int i = MON; i <= WED; i++)
+{
+	cout<<sales[i]<<endl;
+}
+
+p1=John;
+cout<<p1<<endl;
+
+s1=THIRD;
+cout<<s1<<endl;
+return 0;
+
+
+
+
+
+
+
+	
